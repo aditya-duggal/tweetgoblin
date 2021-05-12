@@ -5,7 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
-ENV = 'dev'
+ENV = 'prod'
 
 if ENV == 'dev':
     app.debug = True
@@ -13,7 +13,7 @@ if ENV == 'dev':
     #https://stackoverflow.com/questions/62688256/sqlalchemy-exc-nosuchmoduleerror-cant-load-plugin-sqlalchemy-dialectspostgre
 else:
     app.debug = False
-    app.config['SQLALCHEMY_DATABASE_URI'] = ''
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://rhgvseczmqszwo:6d7221e968b80dc9aad69dbdcc9b2c23416f52492e8c05c97e6d4f22ef77afc3@ec2-34-200-94-86.compute-1.amazonaws.com:5432/dbudg5lfh0rtpj'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
