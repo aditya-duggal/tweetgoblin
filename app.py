@@ -9,11 +9,11 @@ ENV = 'prod'
 
 if ENV == 'dev':
     app.debug = True
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:PGycombinator@localhost:5432/Twitter_Test'
+    app.config['SQLALCHEMY_DATABASE_URI'] = ''
     #https://stackoverflow.com/questions/62688256/sqlalchemy-exc-nosuchmoduleerror-cant-load-plugin-sqlalchemy-dialectspostgre
 else:
     app.debug = False
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://rhgvseczmqszwo:6d7221e968b80dc9aad69dbdcc9b2c23416f52492e8c05c97e6d4f22ef77afc3@ec2-34-200-94-86.compute-1.amazonaws.com:5432/dbudg5lfh0rtpj'
+    app.config['SQLALCHEMY_DATABASE_URI'] = ''
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
@@ -39,9 +39,9 @@ def index():
 @app.route('/submit', methods =['POST'])
 def submit():
     if request.method =='POST' :
-        auth = tweepy.OAuthHandler ("6Dd5YJQcWGYYAsst9HLgvmyf7","wPkxLc3gZQf0b0hdh4bHtr9zUSroBhiZTYXATRMMGagDRiJpD8")
+        auth = tweepy.OAuthHandler ("")
 
-        auth.set_access_token ("332065343-A2wv1pLBHeMsm4PZFvkX7Ko2tqIylf7Ez1bKIcEG", "7r6oEHespSU3pojOOLXem8bPWgeB3DGWRux4KgeQm5xkq")
+        auth.set_access_token ("", "")
 
         api = tweepy.API (auth)
 
@@ -54,7 +54,7 @@ def submit():
         except: 
             print ("Authentication failed")
 
-        username = "manas_saloi"
+        username = ""
 
         tweets = api.user_timeline(screen_name=username,count = 10, tweet_mode='extended', exclude_replies= True,include_entities = True) #entities includes the expanded url, tweet_mode allows for >140 characters - see Tweepy docs for more
 
