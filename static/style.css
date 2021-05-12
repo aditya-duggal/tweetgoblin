@@ -83,10 +83,10 @@ textarea {
 
 .btn {
 	display: block;
-	width: 100%;
+	margin:auto;
 	background: rgb(44, 42, 42);
 	color: rgb(244, 246, 250);
-	padding: 10px 200px;
+	padding: 10px 150px;
 	border: none;
 	cursor: pointer;
 	outline: none;
