@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <title>Thank You!</title>
+  </head>
+  <body>
+    <div class="container">
+      <img src="../static/logo.png" alt="" class="logo" />
+      {% block content %}
+      <h3 class="center">I'm positively surprised and you should be too 😁 </h3>
+        {% for t in tweets %}
+          <div><br><p class="tweet_date">Date: {{ t.date }} </p> <p class="tweet_text"> Text : {{ t.tweet_text }}</p><br></div>
+        {% endfor %}
+      {% endblock %}
+    </div>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <title>TweetGoblin - hoards tweets from Manas Saloi's account</title>
+  </head>
+  <body>
+    <div class="container">
+      <img src="../static/logo.png" alt="Manas Saloi" class="logo" />
+      {% if message %}
+      <p class="message">{{ message | safe }}</p>
+      {% endif %}
+      <form action="/submit" method="POST">
+        <h3 class="center"> Press the button to view a curated, persistent database of @manas_saloi's disappearing tweets! ⏬ </h3>
+        <input type="submit" value="Serve it up!" class="btn" />
+      </form>
+    </div>
+  </body>
+</html>

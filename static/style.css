@@ -1,0 +1,94 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #657786;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #333;
+	line-height: 1.6;
+}
+
+.container {
+	max-width: 650px;
+	margin: 1rem auto;
+	overflow: auto;
+	padding: 0 2rem;
+
+}
+
+h1 {
+	color: #777;
+	margin-top: 15px;
+}
+
+h3 {
+	margin-top: 15px;
+}
+
+.center {
+	text-align: center;
+}
+
+.tweet_date {
+	color: rgb(20, 20, 20);
+	font-family: 'Inter', sans-serif;
+}
+
+.tweet_text {
+	color: rgb(179, 179, 184);
+	font-family: 'Inter', sans-serif;
+}
+
+img {
+	width: 100%;
+}
+
+img.rounded {
+	object-fit: cover;
+  	border-radius: 50%;
+  	height: 100px;
+  	width: 100px;
+}
+
+.message {
+	text-align: center;
+	padding: 5px;
+	border: #ccc dotted 2px;
+	margin-top: 2rem;
+}
+
+.logo {
+	object-fit: cover; /* makes the image round along with the next 3 lines*/
+  	border-radius: 50%;
+  	height: 100px;
+  	width: 100px;
+	display: block; /* centers the image along with margin:auto*/
+	margin: auto; /* Elements can either be inline (meaning they all sit next to each other - like a span tag) or they can be block (meaning the stack up on top of each other - like a div tag).*/
+
+ 
+}
+
+input[type='text'],
+select,
+textarea {
+	display: block;
+	width: 100%;
+	padding: 0.4rem;
+	font-size: 1.2rem;
+	border: 1px solid #ccc;
+}
+
+.btn {
+	display: block;
+	width: 100%;
+	background: rgb(44, 42, 42);
+	color: rgb(244, 246, 250);
+	padding: 10px 200px;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	margin-top: 1rem;
+}
